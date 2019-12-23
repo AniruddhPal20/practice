@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">PracticeExampleForWipro</string>
-    <string name="str_no_internet">Please check you internet connection and try again.</string>
+
+  <string name="app_name">PracticeExampleForWipro</string>
+  <string name="str_no_internet">Please check you internet connection and try again.</string>
+  <string name="str_api_error">Something went wrong.Please try again!</string>
+  <string name="str_no_description">No description found</string>
+
 </resources>

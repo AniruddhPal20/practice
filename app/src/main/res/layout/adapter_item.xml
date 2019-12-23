@@ -1,80 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/ll_main_layout"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/ll_root"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="@dimen/dimen_5"
+  app:cardCornerRadius="@dimen/dimen_5">
+
+  <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="@dimen/dimen_10">
+    android:gravity="center"
+    android:orientation="horizontal">
 
-    <android.support.v7.widget.CardView
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/image_logo"
+      android:layout_width="120dp"
+      android:layout_height="120dp"
+      android:layout_margin="@dimen/dimen_10"
+      android:maxWidth="150dp"
+      android:maxHeight="150dp"
+      android:visibility="visible"
+      tools:src="@drawable/flag_of_canada" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/txt_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/dimen_5">
+        android:layout_margin="@dimen/dimen_5"
+        android:padding="@dimen/dimen_5"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/txtsize_16"
+        android:textStyle="bold"
+        tools:text="Beavers" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+      <TextView
+        android:id="@+id/txt_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5"
+        android:padding="@dimen/dimen_5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txtsize_14"
+        tools:text="Beavers are second only to humans in their ability to manipulate and change their environment. They can measure up to 1.3 metres long." />
 
-            <TextView
-                android:id="@+id/txtTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dimen_5"
-                android:text=""
-                android:textColor="@color/blue"
-                android:textSize="@dimen/txtsize_16"
-                android:textStyle="bold">
-            </TextView>
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imageArrow"
-                android:layout_width="@dimen/dimen_20"
-                android:layout_height="@dimen/dimen_20"
-                android:layout_gravity="right|center_vertical"
-                android:padding="@dimen/dimen_20"
-                android:src="@drawable/arrow"></ImageView>
+  </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/ll_details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txt_details"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="@dimen/dimen_5"
-                    android:layout_toLeftOf="@+id/imageView"
-                    android:layout_marginRight="@dimen/dimen_10"
-                    android:text=""
-                    android:textColor="@color/black"></TextView>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_centerInParent="true"
-                    android:id="@+id/txtViewCenter">
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:maxHeight="150dp"
-                    android:maxWidth="150dp"
-                    android:visibility="visible"
-                    android:layout_alignStart="@+id/txtViewCenter"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_placeholder"
-                    android:layout_marginEnd="@dimen/dimen_5"
-                    android:layout_marginBottom="@dimen/dimen_10">
-                </ImageView>
-            </RelativeLayout>
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-</LinearLayout>
+</androidx.cardview.widget.CardView>
